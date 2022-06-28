@@ -1,0 +1,99 @@
+.titleClock {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+.titlContent {
+    width: 100%;
+}
+
+.infoClock {
+    border: 2px solid rgb(6, 9, 180);
+    border-radius: 10px / 10px;
+    width: 50vh;
+    margin: 5px;
+    height: auto;
+    -webkit-transition-duration: 0.1s; 
+    transition-duration: 0.1s;
+}
+
+.infoClock:hover {
+    border-color:  #4CAF50 ;
+    background-color: rgba(207, 193, 193, 0.3);
+}
+
+.titleDay {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: center;
+    height: auto;
+ 
+}
+
+.backPage {
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nextPage {
+    margin-right: 10px;
+    width: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.textsClock {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: x-large;
+}
+
+.iconClock {
+    display: flex;
+justify-content: flex-end;
+flex-direction: column;
+}
+
+.contentClock {
+    display: flex;
+    justify-content: space-around;
+}
+
+.strelkaLeft {
+    content: '';
+    color:blue;
+    display: inline-block;
+    margin-top: 3.05em;
+    margin-left: 0.6em;
+    width: 1.4em;
+    height: 1.4em;
+    border-top: 0.5em solid;
+    border-right: 0.5em solid;
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transition-duration: 0.15s; 
+      transition-duration: 0.15s;
+  }
+  
+  
+    .strelkaLeft:hover {
+      color:#4CAF50; 
+    }
+
+    .bthClock {
+        position: fixed;
+        left: 5px;
+        top: 5px;
+        display: flex;
+        flex-direction: column;
+    }

@@ -1,0 +1,17 @@
+* {
+
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sky_-_Beautiful_Blue.jpg/640px-Sky_-_Beautiful_Blue.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 115vh; 
+  width: 100%;
+}
+
