@@ -18,19 +18,18 @@ const About = () => {
 
     return (
         <div>
-            <div className='bth5day'>
+            <header className='About-header'>
                 <button onClick={backClick}>назад</button>
-            </div>
                 <h2>Прогноз погоды на 5 дней в городе: {oneDay.city}</h2>
-                <hr />
-            <div className='daysMap' >
+            </header>
+            <main className='daysMap' >
                 {days.map((day: any, index: number) => 
-                    <div  key={index} onClick={indexDay} className='tooltipOne'>
+                    <section  key={index} onClick={indexDay} className='tooltipOne'>
                         <ListInfoOneDay day={day} />
                         <span className='tooltiptextOne'>Более подробный прогноз, нажмите на поле</span>
-                    </div>    
+                    </section>    
                 )}
-            </div>
+            </main>
         </div>
     );
 };

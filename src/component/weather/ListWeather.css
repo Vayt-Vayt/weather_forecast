@@ -7,26 +7,28 @@
 }
 
 .titls {
-    border-bottom: 2px inset rgb(0, 26, 255);
-}
-
-hr {
-    border-bottom-color: rgb(0, 26, 255);
+  margin: 0;
+  border-bottom: 0.2rem inset rgb(0, 26, 255);
 }
 
 .info {
-    border: 2px solid rgb(0, 26, 255);
-    border-radius: 50px / 60px;
-    width: 70vh;
-    margin: 5px;
-    -webkit-transition-duration: 0.15s; 
-    transition-duration: 0.15s;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  border: 0.2rem solid rgb(0, 26, 255);
+  border-radius: 3.5rem / 5rem;
+  width: 100%;
+  -webkit-transition-duration: 0.15s; 
+  transition-duration: 0.15s;
   background-color: rgba(104, 104, 104, 0.068);
 }
 
 .info:hover {
-  border: 2px solid rgba(4, 233, 42, 0.432);
+  border: 0.2rem solid rgba(4, 233, 42, 0.432);
   background-color: rgba(32, 32, 32, 0.2);
+}
+
+.info h3 {
+  margin: 0.1rem;
 }
 
 .forms {
@@ -36,11 +38,12 @@ hr {
 
 .listInfo {
     width: 90vh;
-    border: 1px solid black;
-    margin: 5px;
+    border: 0.05rem solid black;
+    margin: 0.3rem;
 }
 
 .daysMap {
+    padding: 0.1rem;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
@@ -116,11 +119,12 @@ hr {
   }
 
   .myInput {
-    margin: 10px;
+    padding: 0.4rem 0.8rem;
+    margin: 1rem;
     border-color: rgb(0, 3, 160);
     color: rgb(0, 3, 160);
     background-color: rgba(237, 238, 238, 0.089);
-    border-radius: 7px;
+    border-radius: 0.6rem / 0.6rem;
     text-align: center;
     -webkit-transition-duration: 0.15s; 
     transition-duration: 0.15s;
@@ -144,11 +148,14 @@ hr {
   }
 
   button {
+    margin: 0.15rem;
+    padding: 0.4rem;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
     background-color: rgb(6, 9, 207);
     border-color: rgb(0, 3, 160);
     color: white;
-    margin: 3px;
-    border-radius: 5px;
     -webkit-transition-duration: 0.15s; 
     transition-duration: 0.15s;
 
@@ -161,11 +168,22 @@ hr {
     border-color: #4CAF50;
 }
 
-.bth5day {
-  display: flex;
-  justify-content: flex-start;
+.About-header {
+ text-align: center;
+  margin-bottom: 0.5rem;
+  border-bottom: 0.25rem solid blue;
+}
+
+.About-header button {
   position: fixed;
-  margin: 5px;
+  left: 5px;
+  top: 7px;
+  
+}
+
+.About-header h2 {
+  padding: 0.5rem;
+  margin-bottom: 5px;
 }
 
 .iconDay {
@@ -176,16 +194,8 @@ hr {
 }
 
 .description {
-  width: 30%;
-  background-color: rgba(104, 104, 104, 0.068);
-  border-radius: 7px/7px;
-}
-
-.description:hover {
-  width: 30%;
-  background-color: rgb(6, 9, 207);
-  color: white;
- 
+  text-align: center;
+  width: 50%;
 }
 
 .icon {
@@ -195,6 +205,7 @@ hr {
 .tooltipOne {
   position: relative;
   display: inline-block;
+  margin: 10px;
 }
 
 .tooltipOne .tooltiptextOne {
@@ -228,4 +239,30 @@ hr {
 .tooltipOne:hover .tooltiptextOne {
   visibility: visible;
   opacity: 1;
+}
+
+
+@media only screen and (max-width: 550px) {
+  .info {
+    margin: 0.8rem;
+    padding: 1.5rem;
+    width: 100%;
+    border: 0.2rem solid rgb(0, 26, 255);
+    border-radius: 2rem 2rem;
+  }
+
+  button {
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border-radius: 0.2rem;
+    font-size: 0.5rem;
+  }
+
+  input {
+    font-size: 0.6rem;
+  }
+
+  .myInput {
+    border-radius: 0.2rem / 0.2rem;
+  }
 }

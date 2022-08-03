@@ -32,9 +32,9 @@ const Info: React.FC = () => {
 
     return (
         <div className='contant'>
-            <div className='container'>
+            <section className='container'>
                 <h1 className='titls'>{oneDay.city}</h1>
-                <span className='info'>
+                <div className='info'>
                     <h3> Температура: {oneDay.temp} C </h3>
                     <h3> Влажность воздуха: {oneDay.humidity} % </h3>
                     <h3> Давление: {oneDay.pressure} гПа </h3>
@@ -43,12 +43,12 @@ const Info: React.FC = () => {
                         <i className={icon}></i>
                         <p className='description'>{descriptionLoad}</p>
                     </div>
-                </span>
-            </div>
-            <div className='tooltip'>
+                </div>
+            </section>
+            <section className='tooltip'>
                 <span className='strelka' onClick={() => handleClick()}/>
                 <span className='tooltiptext'>Изменение погоды на 5 дней</span>
-            </div>
+            </section>
         </div>
     );
 };

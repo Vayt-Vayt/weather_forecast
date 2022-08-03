@@ -23,7 +23,10 @@ const InfoDayClock = () => {
 
     const nextPage = () => array.length -1 === page ? array.length -1 : setPage(page + 1)
     const backPage = () => page <= 0 ? 0 : setPage(page - 1)
+    const classNextPage = array.length -1 === page ? '' :  'strelka'
+    const classBackPage = page <= 0 ? '' : 'strelkaLeft' 
     const router = useNavigate()
+    
     function AboutClick() {
         router(`/about`)
     }
@@ -33,27 +36,30 @@ const InfoDayClock = () => {
         router(`/info`)
     }
 
+
     return (
         <div className='titleDay'>
-            <div className='bthClock'>
-                <button onClick={AboutClick}>на главную</button>
-                <button onClick={InfoClick}>назад</button>
-            </div>
-            <div className='backPage'>
-                <span 
-                    className={ page <= 0 ? '' : 'strelkaLeft' } 
-                    onClick={backPage}
-                />
-            </div>
-            {day.map((a, index) => 
-                <DayInfo key={index} day={a} />
-            )}  
-            <div className='nextPage' >
-                <span 
-                    className={ array.length -1 === page ? '' :  'strelka' }
-                    onClick={nextPage}
-                />
-            </div>
+                {<div className='backPage'>
+                    <span 
+                        className={ classBackPage } 
+                        onClick={backPage}
+                    />
+                </div>}
+                {day.map((a, index) => 
+                    <DayInfo 
+                        key={index} 
+                        day={a} 
+                        InfoClick={InfoClick} 
+                        AboutClick={AboutClick} 
+
+                    />
+                )}  
+                <div className='nextPage' >
+                    <span 
+                        className={ classNextPage }
+                        onClick={nextPage}
+                    />
+                </div>     
         </div>
     );
 };

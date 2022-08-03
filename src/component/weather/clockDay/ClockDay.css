@@ -1,19 +1,23 @@
 .titleClock {
+    margin: 1.5rem;
     display: flex;
     justify-content: center;
     flex-flow: wrap;
     width: 100%;
+    height: 95%;
 }
 
 .titlContent {
+    margin: 0;
     width: 100%;
 }
 
 .infoClock {
-    border: 2px solid rgb(6, 9, 180);
-    border-radius: 10px / 10px;
-    width: 50vh;
-    margin: 5px;
+    padding: 0.15rem;
+    margin: 0.2rem;
+    border: 0.2rem solid rgb(6, 9, 180);
+    border-radius: 2rem / 2rem;
+    width: 30%;
     height: auto;
     -webkit-transition-duration: 0.1s; 
     transition-duration: 0.1s;
@@ -22,6 +26,10 @@
 .infoClock:hover {
     border-color:  #4CAF50 ;
     background-color: rgba(207, 193, 193, 0.3);
+}
+
+.infoClock h3 {
+    margin: 0.5rem;
 }
 
 .titleDay {
@@ -33,39 +41,47 @@
 }
 
 .backPage {
-    margin-top: 5px;
-    margin-left: 10px;
-    width: 100px;
+    margin-top: 0.5%;
+    margin-left: 1%;
+    width: 5%;
     height: auto;
     display: flex;
     align-items: center;
 }
 
 .nextPage {
-    margin-right: 10px;
-    width: 100px;
+    margin-right: 1%;
+    width: 5%;
     height: auto;
     display: flex;
     align-items: center;
 }
 
 .textsClock {
+    padding: 0.1rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     list-style-type: none;
-    font-size: x-large;
+    font-size: calc(10px + 14 * (100vw / 1280));
+    width: 55%;
 }
 
 .iconClock {
+    margin: 0;
+    padding: 0;
     display: flex;
-justify-content: flex-end;
-flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
 }
 
 .contentClock {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .strelkaLeft {
@@ -92,8 +108,83 @@ flex-direction: column;
 
     .bthClock {
         position: fixed;
-        left: 5px;
-        top: 5px;
+        left: 0.5%;
+        top: 0.5%;
         display: flex;
         flex-direction: column;
+    }
+
+    .header-DayInfo {
+        border-bottom: 0.2rem solid darkblue;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .header-DayInfo h2 {
+        margin: 0.5rem;
+    }
+
+    #icon-day, i {
+        color: blue;
+        width: 80%;
+    }
+    #icon-text  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        font-size: 0.8rem;
+ 
+    }
+
+    @media only screen and (max-width: 900px) {
+        #icon-text  {
+            font-size: 0.7rem;
+        }
+
+        #icon-day, i {
+            font-size: 2.5rem;
+        }
+
+    }
+
+    @media only screen and (max-width: 770px) {
+        .textsClock {
+            font-size: calc(7px + (8 + 8 * 0.7) * ((100vw - 320px) / 1280));
+        }
+
+        #icon-text  {
+            font-size: 0.5rem;
+        }
+
+        #icon-day, i {
+            font-size: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 550px) {
+
+        .textsClock {
+            font-size: 0.6rem;
+        }
+
+        .infoClock {
+            margin: 0.3rem;
+            border: 0.2rem solid rgb(6, 9, 180);
+            border-radius: 0.8rem / 0.8rem;
+            width: 70%;
+        }
+
+        .header-DayInfo {
+            border-bottom: 0.15rem solid darkblue;
+        }
+
+        #icon-text  {
+            font-size: 0.5rem;
+        }
+
+        #icon-day, i {
+            font-size: 3rem;
+        }
+
     }
